@@ -1,4 +1,4 @@
-const { Pizza } = require('../models');
+const { Pizza } = require('../model/index');
 
 const pizzaController = {
     // get all pizzas
@@ -69,6 +69,6 @@ deletePizza({ params }, res) {
         res.json(dbPizzaData);
       })
       .catch(err => res.status(400).json(err));
-  }
+  }}
 
 module.exports = pizzaController;
